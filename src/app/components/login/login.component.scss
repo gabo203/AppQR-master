@@ -1,0 +1,105 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  h1 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+
+    ion-item {
+      --background: rgba(255, 255, 255, 0.1);
+      --border-radius: 10px;
+      margin-bottom: 15px;
+
+      ion-label {
+        color: #ffffff;
+      }
+
+      ion-input {
+        color: #ffffff;
+      }
+    }
+
+    .login-button {
+      margin-top: 20px;
+      --background: #4c669f;
+      --background-hover: #3b5998;
+      --background-activated: #3b5998;
+      --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      --border-radius: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+
+  .additional-options {
+    margin-top: 20px;
+
+    ion-button {
+      --color: white;
+      font-weight: bold;
+      font-size: 0.85em;
+      text-transform: capitalize;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    animation: shake 0.3s ease-in-out;
+
+    .register-link {
+      color:#b3b3ff; /* Color celeste */
+      margin-left: 5px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .error-icon {
+    margin-right: 5px;
+    font-size: 1.2em;
+  }
+
+  .eye-icon {
+    color: white;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+.password-toggle-icon {
+  color: white;
+}

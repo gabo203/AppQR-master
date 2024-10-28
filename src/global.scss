@@ -1,0 +1,74 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+/* Add this to your global styles.scss or styles.css */
+/* styles.scss o styles.css */
+/* styles.scss o styles.css */
+.toast-center-center {
+  top: 13% !important;
+  left: 75% !important;
+  transform: translate(-50%, -50%) !important;
+  position: fixed !important; /* Asegúrate de que la posición sea fija */
+  z-index: 9999 !important; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.toast-success {
+  background-color: #28a745 !important; /* Fondo verde */
+  color: #fff !important; /* Texto blanco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-success::before {
+  content: '✔️'; /* Icono de check */
+  margin-right: 8px;
+}
+.custom-toastr-error {
+  background-color: orange !important;
+  color: white !important;
+  display: flex;
+  align-items: center;
+}
+
+.custom-toastr-error .toast-message {
+  flex-grow: 1;
+}
+
+.custom-toastr-error .toast-icon {
+  margin-right: 10px;
+}

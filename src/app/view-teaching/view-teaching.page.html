@@ -1,0 +1,107 @@
+<ion-header [translucent]="true" class="professional-header">
+  <ion-toolbar>
+    <ion-title>Portal Docente</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" class="logout-button">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Cerrar Sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="professional-content">
+  <div class="profile-section">
+    <div class="profile-header">
+      <ion-avatar>
+        <img src="assets/icon/perfil.png" alt="Profile">
+      </ion-avatar>
+      <div class="user-info">
+        <h2>{{ username }}</h2>
+        <p>Profesor Titular</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <ion-card class="dashboard-card">
+      <ion-card-header>
+        <div class="card-header-content">
+          <ion-icon name="people-outline"></ion-icon>
+          <ion-card-title>Mis Cursos Activos</ion-card-title>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="course-list">
+          <div class="course-item">
+            <div class="course-info">
+              <h3>Programación Avanzada</h3>
+              <p>4° Semestre - 35 estudiantes</p>
+            </div>
+            <ion-badge color="primary">En curso</ion-badge>
+          </div>
+          <div class="course-item">
+            <div class="course-info">
+              <h3>Base de Datos</h3>
+              <p>3° Semestre - 40 estudiantes</p>
+            </div>
+            <ion-badge color="primary">En curso</ion-badge>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="dashboard-card">
+      <ion-card-header>
+        <div class="card-header-content">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <ion-card-title>Calendario Académico</ion-card-title>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <div class="schedule-info">
+              <h3>Evaluación Final - Prog. Avanzada</h3>
+              <p>Sala 305 - 14:30</p>
+            </div>
+            <span class="date">15 Nov</span>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-info">
+              <h3>Entrega de Notas</h3>
+              <p>Plazo máximo</p>
+            </div>
+            <span class="date">20 Nov</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="dashboard-card">
+      <ion-card-header>
+        <div class="card-header-content">
+          <ion-icon name="stats-chart-outline"></ion-icon>
+          <ion-card-title>Estadísticas de Curso</ion-card-title>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="label">Asistencia Promedio</span>
+            <span class="value">85%</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">Promedio General</span>
+            <span class="value">5.8</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">Evaluaciones Pendientes</span>
+            <span class="value">2</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+</ion-content>

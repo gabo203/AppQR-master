@@ -1,0 +1,15 @@
+<div class="pokemon-list">
+  <h2>Pokédex</h2>
+  <div *ngIf="selectedPokemon" class="pokemon-details">
+    <h3>{{ selectedPokemon.name | titlecase }}</h3>
+    <img [src]="selectedPokemon.sprites.front_default" alt="{{ selectedPokemon.name }}">
+    <p>Height: {{ selectedPokemon.height }}</p>
+    <p>Weight: {{ selectedPokemon.weight }}</p>
+  </div>
+  <ul>
+    <li *ngFor="let pokemon of pokemonList" (click)="loadPokemonDetails(pokemon.name)">
+      {{ pokemon.name | titlecase }}
+    </li>
+  </ul>
+</div>
+

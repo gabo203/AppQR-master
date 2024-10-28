@@ -1,0 +1,108 @@
+<ion-header [translucent]="true" class="professional-header">
+  <ion-toolbar>
+    <ion-title>Portal Académico</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" class="logout-button">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Cerrar Sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="professional-content">
+  <div class="profile-section">
+    <div class="profile-header">
+      <ion-avatar>
+        <img src="assets/icon/perfil.png" alt="Profile">
+      </ion-avatar>
+      <div class="user-info">
+        <h2>{{ username }}</h2>
+        <p>Estudiante Activo</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <ion-card class="dashboard-card">
+      <ion-card-header>
+        <div class="card-header-content">
+          <ion-icon name="school-outline"></ion-icon>
+          <ion-card-title>Información Académica</ion-card-title>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Carrera</span>
+            <span class="value">Ingeniería en Informática</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Semestre</span>
+            <span class="value">4° Semestre</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Promedio</span>
+            <span class="value">6.5</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="dashboard-card">
+      <ion-card-header>
+        <div class="card-header-content">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <ion-card-title>Próximas Evaluaciones</ion-card-title>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="evaluation-list">
+          <div class="evaluation-item">
+            <div class="eval-info">
+              <h3>Programación Avanzada</h3>
+              <p>Evaluación Final</p>
+            </div>
+            <span class="date">15 Nov</span>
+          </div>
+          <div class="evaluation-item">
+            <div class="eval-info">
+              <h3>Base de Datos</h3>
+              <p>Proyecto Final</p>
+            </div>
+            <span class="date">20 Nov</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button class="qr-button" expand="block" (click)="showQRCode()">
+    <ion-icon name="qr-code-outline" slot="start"></ion-icon>
+    Generar Código QR
+  </ion-button>
+
+  <ion-button class="pokemon-section" expand="block" (click)="togglePokemonList()">
+    <ion-icon name="game-controller-outline" slot="start"></ion-icon>
+    Acceder a Pokédex
+  </ion-button>
+
+  <div *ngIf="showPokemonList" class="pokedex-wrapper">
+    <app-pokedex></app-pokedex>
+  </div>
+
+  <div class="qr-overlay" *ngIf="isQRVisible">
+    <div class="qr-container">
+      <h2>Tu Código QR</h2>
+      <qrcode 
+        [qrdata]="qrCodeData"
+        [width]="300"
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+      <ion-button class="back-button" (click)="hideQRCode()">
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        Volver
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
